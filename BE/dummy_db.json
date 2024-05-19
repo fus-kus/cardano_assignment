@@ -1,0 +1,110 @@
+[
+  {
+    "id": "e3e70682-c209-4cac-a29f-6fbed82c07cd",
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "john.smith@example.com",
+    "age": 29,
+    "maritalStatus": "Single",
+    "address": "123 Maple St."
+  },
+  {
+    "id": "17ecc5d7-6d4e-4f55-9e5c-408e8f57ee8e",
+    "firstName": "Jane",
+    "lastName": "Johnson",
+    "email": "jane.johnson@example.com",
+    "age": 34,
+    "maritalStatus": "Married",
+    "address": "456 Oak St."
+  },
+  {
+    "id": "a2881d68-4811-40ef-a46b-7a87c27db3ae",
+    "firstName": "Sam",
+    "lastName": "Williams",
+    "email": "sam.williams@example.com",
+    "age": 45,
+    "maritalStatus": "Divorced",
+    "address": "789 Pine St."
+  },
+  {
+    "id": "8a14d54d-104b-4c45-9347-2db060f1f170",
+    "firstName": "Alice",
+    "lastName": "Jones",
+    "email": "alice.jones@example.com",
+    "age": 26,
+    "maritalStatus": "Other",
+    "address": "101 North Ave."
+  },
+  {
+    "id": "02d73af2-7864-42e1-87b0-b35c8e45b7ad",
+    "firstName": "Mark",
+    "lastName": "Brown",
+    "email": "mark.brown@example.com",
+    "age": 32,
+    "maritalStatus": "Married",
+    "address": "202 South Ave."
+  },
+  {
+    "id": "af9fd0c6-c8df-46b5-a5c2-3bb6efdf95a2",
+    "firstName": "Sara",
+    "lastName": "Davis",
+    "email": "sara.davis@example.com",
+    "age": 37,
+    "maritalStatus": "Single",
+    "address": "303 East Ave."
+  },
+  {
+    "id": "d09bf415-f55a-447e-bc59-05b3f4b1784a",
+    "firstName": "Mike",
+    "lastName": "Miller",
+    "email": "mike.miller@example.com",
+    "age": 50,
+    "maritalStatus": "Divorced",
+    "address": "404 West Ave."
+  },
+  {
+    "id": "62f22279-8e30-44e8-bf24-83f699623223",
+    "firstName": "Linda",
+    "lastName": "Wilson",
+    "email": "linda.wilson@example.com",
+    "age": 28,
+    "maritalStatus": "Other",
+    "address": "505 Front St."
+  },
+  {
+    "id": "f74f689b-1721-4ca3-99ed-abbf481f5fea",
+    "firstName": "James",
+    "lastName": "Moore",
+    "email": "james.moore@example.com",
+    "age": 39,
+    "maritalStatus": "Married",
+    "address": "606 Back St."
+  },
+  {
+    "id": "3c77b151-3166-48a9-9842-7d3b92be2727",
+    "firstName": "Patricia",
+    "lastName": "Taylor",
+    "email": "patricia.taylor@example.com",
+    "age": 24,
+    "maritalStatus": "Single",
+    "address": "707 Hill St."
+  },
+  {
+    "id": "5ecbf534-1bb0-4287-aa20-14ebe5dd7dcd",
+    "firstName": "Ella",
+    "lastName": "Clark",
+    "email": "ella.clark@example.com",
+    "age": 33,
+    "maritalStatus": "Married",
+    "address": "404 West Ave."
+  },
+  {
+    "id": "f6ba6bcd-0063-4f4a-9e8a-6557f4cc9d19",
+    "firstName": "Bob",
+    "lastName": "Lewis",
+    "email": "bob.lewis@example.com",
+    "age": 41,
+    "maritalStatus": "Divorced",
+    "address": "101 North Ave."
+  }
+]
