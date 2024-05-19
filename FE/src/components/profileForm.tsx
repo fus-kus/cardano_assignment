@@ -42,8 +42,9 @@ export function ProfileDialog({
   onUpdate?: () => void;
   editMode?: boolean;
 }) {
+  const [open, setOpen] = useState(false);
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -53,9 +54,19 @@ export function ProfileDialog({
             Click save when you are done.
           </DialogDescription>
         </DialogHeader>
-        <ProfileForm values={values} onUpdate={onUpdate} />
+        <ProfileForm
+          values={values}
+          onUpdate={() => {
+            onUpdate();
+            setOpen(false);
+          }}
+        />
         {ifOrEmpty(editMode, () => (
           <ConfirmPopover
+            onUpdate={() => {
+              onUpdate();
+              setOpen(false);
+            }}
             promise={() => {
               if (values != null) {
                 return deleteUser(values.id);

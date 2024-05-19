@@ -11,10 +11,10 @@ import { AlertCircle } from "lucide-react";
 import { Alert, AlertTitle, AlertDescription } from "./ui/alert";
 import { ifElse } from "@/lib/renderingUtils";
 
-function renderDataTable(users: User[]) {
+function renderDataTable(users: User[], onUpdate: () => void) {
   return (
     <React.Fragment>
-      <DataTable columns={columns} data={users} />
+      <DataTable columns={columns} data={users} onUpdate={onUpdate} />
       <div className="flex flex-row justify-end">
         <div className="space-x-2">
           <ProfileDialog>
@@ -42,16 +42,16 @@ export function InnerPage() {
   const [users, setUsers] = useState<User[]>([]);
   const [errorMessage, setErrorMessage] = useState("");
 
+  const getUsers = () => {
+    fetchUsers()
+      .then((users) => {
+        setUsers(users);
+      })
+      .catch((error) => {
+        setErrorMessage(JSON.stringify(error));
+      });
+  };
   useEffect(() => {
-    const getUsers = () => {
-      fetchUsers()
-        .then((users) => {
-          setUsers(users);
-        })
-        .catch((error) => {
-          setErrorMessage(JSON.stringify(error));
-        });
-    };
     getUsers();
   }, []);
 
@@ -61,7 +61,7 @@ export function InnerPage() {
       {ifElse(
         errorMessage !== "",
         () => renderErrorMessage(errorMessage),
-        () => renderDataTable(users)
+        () => renderDataTable(users, getUsers)
       )}
     </div>
   );

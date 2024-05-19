@@ -57,9 +57,13 @@ function emptyTable(colSpan: number) {
   );
 }
 
-function tableRow<TData>(row: Row<TData>) {
+function tableRow<TData>(row: Row<TData>, onUpdate: () => void) {
   return (
-    <ProfileDialog editMode values={UserSchema.parse(row.original)}>
+    <ProfileDialog
+      editMode
+      values={UserSchema.parse(row.original)}
+      onUpdate={onUpdate}
+    >
       <TableRow key={row.id} data-state={row.getIsSelected() && "selected"}>
         {row.getVisibleCells().map((cell) => (
           <TableCell key={cell.id}>
@@ -74,7 +78,8 @@ function tableRow<TData>(row: Row<TData>) {
 export function DataTable<TData, TValue>({
   columns,
   data,
-}: DataTableProps<TData, TValue>) {
+  onUpdate,
+}: DataTableProps<TData, TValue> & { onUpdate: () => void }) {
   const table = useReactTable({
     data,
     columns,
@@ -104,7 +109,7 @@ export function DataTable<TData, TValue>({
         </TableHeader>
         <TableBody>
           {table.getRowModel().rows?.length
-            ? table.getRowModel().rows.map((row) => tableRow(row))
+            ? table.getRowModel().rows.map((row) => tableRow(row, onUpdate))
             : emptyTable(columns.length)}
         </TableBody>
       </Table>

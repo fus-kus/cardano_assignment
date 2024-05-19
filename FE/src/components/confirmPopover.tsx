@@ -10,10 +10,12 @@ export function ConfirmPopover({
   message,
   children,
   promise,
+  onUpdate = () => {},
 }: {
   message: string;
   children: React.ReactNode;
   promise: () => Promise<any>;
+  onUpdate?: () => void;
 }) {
   const [open, setOpen] = useState<boolean>(false);
   return (
@@ -28,6 +30,7 @@ export function ConfirmPopover({
             onSuccess={() => {
               setTimeout(() => {
                 setOpen(false);
+                onUpdate();
               }, 1500);
             }}
           >
